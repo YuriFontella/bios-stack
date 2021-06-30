@@ -61,7 +61,7 @@ const Profile = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center space-y-12">
+                <div className={`flex flex-col items-center ${item.profile ? 'space-y-12' : 'space-y-2'}`}>
                   <div className="-mt-16 border-2 border-white rounded-full">
                     <Image src={item.image} className="shadow-lg rounded-full object-cover" alt="" width="140" height="140" />
                   </div>
@@ -91,7 +91,7 @@ const Profile = ({ data }) => {
                     }
 
                     <p className="text-gray-600 text-center font-light leading-relaxed">
-                      <span className={item.email ? 'fas fa-envelope mr-2 text-gray-500' : null} /> {item.email}
+                      <span className="fas fa-envelope mr-2 text-gray-500" /> {item.email}
                     </p>
                   </div>
 
