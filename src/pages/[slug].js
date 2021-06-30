@@ -61,22 +61,22 @@ const Profile = ({ data }) => {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center space-y-12">
+                <div className="flex flex-col items-center space-y-12">
                   <div className="-mt-16 border-2 border-white rounded-full">
                     <Image src={item.image} className="shadow-lg rounded-full object-cover" alt="" width="140" height="140" />
                   </div>
 
-                  <div className="flex flex-col justify-center items-center">
+                  <div className="flex flex-col items-center">
                     <h1 className="capitalize text-2xl font-bold leading-normal text-gray-800">{item.profile?.name} {item.profile?.last_name}</h1>
 
                     {item.profile?.localization &&
                       <div className="text-xs leading-normal mt-2 text-gray-600 font-medium uppercase">
-                        <span className="fas fa-map-marker-alt mr-2 text-gray-500" /> {item.profile?.localization}
+                        <span className="fas fa-map-marker-alt mr-1 text-gray-500" /> {item.profile?.localization}
                       </div>
                     }
                   </div>
 
-                  <div className="flex flex-col justify-center items-center space-y-2">
+                  <div className="flex flex-col space-y-2">
 
                     {item.profile?.contact &&
                       <p className="text-gray-600 text-center font-light leading-relaxed">

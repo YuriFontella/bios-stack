@@ -33,7 +33,7 @@ const Private = ({ children }) => {
           <section className="max-w-4xl mx-auto">
             <Cover item={item} />
 
-            <div className="px-2 sm:px-12 -mt-28">
+            <div className="px-2 sm:px-12 -mt-24">
               <div className="grid grid-cols-3 gap-6">
                 <div className="col-span-3 sm:col-span-1">
                   <Sidebar item={item} />
