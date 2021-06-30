@@ -10,7 +10,7 @@ const Options = () => {
   const router = useRouter()
 
   return (
-    <section className="py-0 mt-6 sm:py-5 sm:mt-0">
+    <section className="py-0 mt-5 sm:py-5 sm:mt-0">
       <ul className="space-y-8 p-6 sm:p-0 bg-white sm:bg-transparent border border-white sm:border-0 rounded shadow sm:shadow-none">
         <li>
           <div className="flex items-center gap-2 text-sm font-medium text-gray-900">

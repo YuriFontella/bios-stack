@@ -18,7 +18,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex justify-center bg-gray-100 px-4 sm:px-0">
-      <div className="max-w-sm w-full space-y-8 mt-52">
+      <div className="max-w-sm w-full space-y-8 mt-32 sm:mt-48">
         <div>
           <div className="flex justify-center">
             <UserCircleIcon className="h-16 w-16 text-blue-600" aria-hidden="true" />
