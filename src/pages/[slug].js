@@ -96,8 +96,8 @@ const Profile = ({ data }) => {
                   </div>
 
                   {item.profile?.biography &&
-                    <div className="w-full border-t border-gray-200 pt-4">
-                      <div className="text-md leading-relaxed text-gray-600 text-center p-8">
+                    <div className="w-full border-t border-gray-200">
+                      <div className="text-md leading-relaxed text-gray-600 text-center px-8 pt-11 pb-4">
                         {item.profile?.biography}
                       </div>
                     </div>
