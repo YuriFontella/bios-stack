@@ -18,6 +18,8 @@ export const USER = `
   query {
     user {
       image
+      password
+      email
       profile {
         name
         last_name

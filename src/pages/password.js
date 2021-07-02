@@ -10,7 +10,13 @@ import { useForm } from 'react-hook-form'
 
 import { useEffect } from 'react'
 
+import { useStore } from '@/src/contexts/store'
+
+import { ExclamationIcon } from '@heroicons/react/solid'
+
 const Password = () => {
+
+  const { state } = useStore()
 
   const [changePassword, { data }] = useMutation(CHANGE_PASSWORD)
 
@@ -26,6 +32,9 @@ const Password = () => {
 
     changePassword({ variables: { password: data.password } })
     reset()
+
+    if (state.user)
+      Object.assign(state.user, { password: true })
   }
 
   useEffect(() => {
@@ -35,6 +44,18 @@ const Password = () => {
 
   return (
     <div>
+      {!state?.user?.password &&
+        <div className="flex flex-col items-center space-y-3 mb-10">
+          <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">Atenção</h2>
+
+          <ExclamationIcon className="w-1/12 h-1/12 text-gray-800" />
+
+          <p className="text-sm text-gray-500">
+            É importante criar uma senha para poder logar utilizando o seu e-mail <b>{state?.user?.email}</b>. Caso algum dia o serviço do google fique indisponível.
+          </p>
+        </div>
+      }
+
       <div className="mb-6">
         <h3 className="text-md font-medium leading-6 text-gray-700">Alterar a senha</h3>
         <p className="mt-1 text-xs text-gray-600">
