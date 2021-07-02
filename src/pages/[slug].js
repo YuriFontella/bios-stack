@@ -44,7 +44,7 @@ const Profile = ({ data }) => {
 
                 <div className={`flex flex-col items-center ${item.profile ? 'space-y-12' : 'space-y-2'}`}>
                   <div className="-mt-16 border-4 border-white rounded-full">
-                    <Image src={item.image} className="shadow-lg rounded-full object-cover" alt="" width="150" height="150" />
+                    <Image src={item.image} className="rounded-full object-cover" alt="" width="150" height="150" />
                   </div>
 
                   <div className="flex flex-col items-center">
