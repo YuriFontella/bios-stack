@@ -22,7 +22,7 @@ const Networks = ({ item }) => {
         </button>
       }
       {item.networks?.instagram &&
-        <button onClick={() => redirect(item.networks.instagram)} className="bg-gradient-to-tl via-pink-600 to-purple-600 from-yellow-300 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full w-7 h-7">
+        <button onClick={() => redirect(item.networks.instagram)} className="bg-gradient-to-tr via-pink-600 to-purple-600 from-yellow-300 hover:bg-pink-700 focus:ring-pink-500 focus:ring-offset-pink-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full w-7 h-7">
           <span className="fab fa-instagram" />
         </button>
       }
