@@ -9,6 +9,8 @@ import Router from 'next/router'
 
 import Meta from '@/src/components/meta'
 
+import Networks from '@/src/components/pages/slug/networks'
+
 import Photo from '@/src/components/pages/slug/photo'
 
 const Profile = ({ data }) => {
@@ -37,28 +39,7 @@ const Profile = ({ data }) => {
               <div className="bg-white border border-white rounded shadow-lg pb-8 relative">
 
                 <div className="absolute left-6 top-4 hidden sm:block">
-                  <div className="flex space-x-6">
-                    {item.networks?.facebook &&
-                      <a href={item.networks.facebook} rel="noreferrer" target="_blank">
-                        <span className="fab fa-facebook text-lg text-gray-600" />
-                      </a>
-                    }
-                    {item.networks?.youtube &&
-                      <a href={item.networks.youtube} rel="noreferrer" target="_blank">
-                        <span className="fab fa-youtube text-lg text-gray-600" />
-                      </a>
-                    }
-                    {item.networks?.instagram &&
-                      <a href={item.networks.instagram} rel="noreferrer" target="_blank">
-                        <span className="fab fa-instagram text-lg text-gray-600" />
-                      </a>
-                    }
-                    {item.networks?.twitter &&
-                      <a href={item.networks.twitter} rel="noreferrer" target="_blank">
-                        <span className="fab fa-twitter text-lg text-gray-600" />
-                      </a>
-                    }
-                  </div>
+                  <Networks item={item} />
                 </div>
 
                 <div className={`flex flex-col items-center ${item.profile ? 'space-y-12' : 'space-y-2'}`}>
@@ -75,6 +56,12 @@ const Profile = ({ data }) => {
                       </div>
                     }
                   </div>
+
+                  {item.networks && Object.values(item.networks).indexOf("") !== 0 &&
+                    <div className="sm:hidden">
+                      <Networks item={item} />
+                    </div>
+                  }
 
                   <div className="flex flex-col space-y-2">
 
